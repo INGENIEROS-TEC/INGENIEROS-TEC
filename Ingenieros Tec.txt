@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+
+int main(){
+
+int x[0][0],p,n,k;
+int c;
+
+
+do{
+	int i=0;
+	printf("\t\nIngresa el numero de lapiz que hay ");
+	scanf("%d",&n);
+	printf("\t\nIngresa el tipo de lapiz ");
+	scanf("%d",&k);
+	
+	printf("\t\n Deseas ingresar otro lapiz? ");
+	
+	printf("\t\n\n Si= 1 ");
+	printf("\t\n No=  2 \n");
+	
+	scanf("%d",&c);
+	
+}
+while(c==1);
+
+	printf("\t\n Numeros de lapices a contar ");
+	
+	scanf("%d",&p);
+	
+	printf("\t\n Hay %d lapices del numero %d",n,k);
+	
+}

@@ -1,0 +1,36 @@
+create database concurso;
+use concurso;
+create table tareas(
+titulo varchar(150) primary key,
+descripcion varchar(500),
+fecha date,
+estado varchar(300),
+etiqueta varchar(300)
+);
+create table etiquetas(
+id int primary key,
+materia varchar(300),
+FOREIGN KEY (materia) REFERENCES tareas(etiqueta)
+);
+create table usuarios(
+id int primary key ,
+usuario varchar(300),
+contraseña varchar(50)
+);
+insert into tareas values("Tarea1","USO DE VLANs","2022-02-10","pendiente"),
+("Tarea2","Sintaxis de html","2022-02-11","completada"),
+("Tarea3","Sintaxis de UPDATE","2022-02-12","incompleto"),
+("Tarea4","investigar ACLS","2022-02-13","pendiente"),
+("Tarea5","Investugar plaltillo del buen comer","2022-02-14","pendiente");
+insert into etiquetas values(1,"Redes"),
+(2,"Prograkacion web"),
+(3,"Bases de datos"),
+(4,"Redes WAN"),
+(5,"Educacion fisica");
+insert into usuarios values(1,"Alan","alan1"),
+(2,"Osvaldo","osvaldo1"),
+(3,"Jose","jose1"),
+(4,"Antonio","antonio1"),
+(5,"Brandon","brandon1");
+select * from usuarios;
+drop database concurso;

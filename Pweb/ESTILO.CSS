@@ -1,0 +1,33 @@
+body{
+    background-color: aqua;
+}
+header{
+    text-align: right;
+}
+.edu{
+    margin-top: 5%;
+    padding-left: 70%;
+
+}
+header .img{
+    padding-right: 90px;
+}
+footer{
+    position: relative;
+    margin-left: 90px;
+    margin-right: 80px;
+    text-align: center;
+    padding-top:100px;
+}
+.foot{
+    position: relative;
+    margin-left: 90px;
+    margin-right: 80px;
+    text-align: center; 
+    margin-top: 40%;
+}
+.info{
+    margin-top: 5%;
+    padding-left: 70%; 
+    margin-top:10%;
+}

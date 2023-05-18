@@ -1,0 +1,64 @@
+Switch#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#interface fa0/2 
+Switch(config-if)#sw
+Switch(config-if)#switchport mod
+Switch(config-if)#switchport mode ac
+Switch(config-if)#switchport mode access vlan 10
+                                         ^
+% Invalid input detected at '^' marker.
+	
+Switch(config-if)#switchport access
+% Incomplete command.
+Switch(config-if)#switchport access vlan_10
+                                        ^
+% Invalid input detected at '^' marker.
+	
+Switch(config-if)#swichport mode acces
+                     ^
+% Invalid input detected at '^' marker.
+	
+Switch(config-if)#switchport mode access
+Switch(config-if)#switchport access vlan_10 
+                                        ^
+% Invalid input detected at '^' marker.
+	
+Switch(config-if)#switchport access vlan 10 
+Switch(config-if)#exit
+Switch(config)#interface fa0/3
+Switch(config-if)#switchport mode access 
+Switch(config-if)#switchport access vlan 20
+Switch(config-if)#exir
+                     ^
+% Invalid input detected at '^' marker.
+	
+Switch(config-if)#exit
+Switch(config)#interface fa0/4
+Switch(config-if)#switchport mode access 
+Switch(config-if)#switchport access vlan 30
+
+Switch(config)#exit
+Switch#
+%SYS-5-CONFIG_I: Configured from console by console
+Switch#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Switch(config)#interface fa0/1
+Switch(config-if)#sw mod trunk
+
+Switch(config-if)#
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to down
+
+%LINEPROTO-5-UPDOWN: Line protocol on Interface FastEthernet0/1, changed state to up
+
+Switch(config-if)#EX
+Switch(config)#HOSTNAME SW_2
+SW_2(config)#ENABLE PASSWORD CISCO
+SW_2(config)#ENABLE SECRET CLASS
+SW_2(config)#LINE CONSOLE 0
+SW_2(config-line)#PASSWORD CONSOLA
+SW_2(config-line)#LOGIN
+SW_2(config-line)#EXIT
+SW_2(config)#LINE VTY 0 4
+SW_2(config-line)#PASSWORD VIRTUALES
+SW_2(config-line)#LOGIN
+SW_2(config-line)#EXIT
